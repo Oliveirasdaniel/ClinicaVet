@@ -7,7 +7,7 @@ const CONFIG = {
   // Mensagem que já aparece escrita quando o cliente abre o WhatsApp
   mensagem: 'Olá, Leticia! Vim pelo site e gostaria de agendar um atendimento para o meu pet 🐾',
   // Instagram sem o @. Ex.: 'leticiatrevizan.vet'
-  instagram: '',
+  instagram: 'vetleticiatrevizan',
   // Endereço do consultório, usado no mapa. Ex.: 'Rua Tal, 123 - Centro, Cerquilho - SP'
   endereco: 'Cerquilho - SP',
 };

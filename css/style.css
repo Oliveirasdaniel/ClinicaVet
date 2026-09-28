@@ -644,29 +644,7 @@ article.modo:last-of-type .modo__foto img { object-position: 50% 26%; }
 .sobre__texto > p { margin: 0 0 14px; color: var(--vinho-2); font-size: 1.1rem; }
 .sobre__texto strong { color: var(--vinho); }
 
-.valores {
-  margin: 26px 0 30px;
-  padding: 0;
-  list-style: none;
-}
-.valores li {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  column-gap: 16px;
-  align-items: center;
-  padding: 14px 0;
-  border-top: 1.5px dashed rgba(212, 44, 103, .35);
-}
-.valores li:last-child { border-bottom: 1.5px dashed rgba(212, 44, 103, .35); }
-.valores strong { color: var(--vinho); font-size: 1.05rem; }
-.valores li > span:last-child { grid-column: 2; color: var(--vinho-2); }
-.valores__icone {
-  grid-row: span 2;
-  color: var(--rosa-escuro);
-}
-.valores__icone svg { width: 30px; height: 30px; display: block; }
-
-.assinatura { margin: 0; display: flex; flex-direction: column; gap: 2px; }
+.assinatura { margin: 26px 0 0; display: flex; flex-direction: column; gap: 2px; }
 .assinatura .script { font-size: 2.6rem; line-height: 1.1; }
 .assinatura__crmv {
   font-size: .82rem;
