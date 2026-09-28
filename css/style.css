@@ -456,7 +456,7 @@ h2 {
   gap: clamp(40px, 7vw, 100px);
   align-items: start;
 }
-.servicos__intro { position: sticky; top: 110px; }
+
 .servicos__intro p { margin: 0; max-width: 40ch; font-size: 1.1rem; color: var(--vinho-2); }
 .servicos__foto {
   margin: 40px 0 0;
@@ -929,7 +929,6 @@ article.modo:last-of-type .modo__foto img { object-position: 50% 26%; }
   .hero__arte { width: min(100%, 440px); }
 
   .servicos { grid-template-columns: 1fr; }
-  .servicos__intro { position: static; }
   .servicos__foto { width: min(100%, 320px); margin-top: 32px; }
 
   .modos { grid-template-columns: 1fr; gap: 44px; }
