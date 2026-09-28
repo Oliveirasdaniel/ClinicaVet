@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 220" width="760" height="220">
+  <title>Leticia Trevizan · Médica Veterinária</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&amp;family=Playfair+Display:wght@600&amp;display=swap');
+      .nome { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: 50px; letter-spacing: 5px; fill: #4A1A2C; }
+      .sub  { font-family: 'Nunito', 'Segoe UI', sans-serif; font-weight: 800; font-size: 17px; letter-spacing: 7px; fill: #D42C67; }
+    </style>
+    <clipPath id="coracao">
+      <path d="M100 182C60 150 12 115 12 68C12 38 35 18 62 18C80 18 93 28 100 42C107 28 120 18 138 18C165 18 188 38 188 68C188 115 140 150 100 182Z"/>
+    </clipPath>
+  </defs>
+
+  <g transform="translate(6 10)">
+    <g clip-path="url(#coracao)">
+      <rect width="200" height="200" fill="#A81C4E"/>
+      <path fill="#D42C67" transform="translate(10 -4)" d="M100 182C60 150 12 115 12 68C12 38 35 18 62 18C80 18 93 28 100 42C107 28 120 18 138 18C165 18 188 38 188 68C188 115 140 150 100 182Z"/>
+    </g>
+    <g fill="#FBF1E8" transform="translate(46 41) scale(1.08)">
+      <path d="M50 48C62 48 70 58 76 68C82 78 80 90 69 90C61 90 57 85 50 85C43 85 39 90 31 90C20 90 18 78 24 68C30 58 38 48 50 48Z"/>
+      <ellipse cx="36" cy="28" rx="8.5" ry="11.5" transform="rotate(-12 36 28)"/>
+      <ellipse cx="64" cy="28" rx="8.5" ry="11.5" transform="rotate(12 64 28)"/>
+      <ellipse cx="17" cy="47" rx="7.5" ry="10" transform="rotate(-38 17 47)"/>
+      <ellipse cx="83" cy="47" rx="7.5" ry="10" transform="rotate(38 83 47)"/>
+    </g>
+  </g>
+
+  <text class="nome" x="236" y="112">LETICIA TREVIZAN</text>
+  <line x1="238" y1="146" x2="290" y2="146" stroke="#D42C67" stroke-width="2" stroke-linecap="round"/>
+  <text class="sub" x="304" y="152">MÉDICA VETERINÁRIA</text>
+  <line x1="588" y1="146" x2="640" y2="146" stroke="#D42C67" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="648" cy="146" r="5" fill="none" stroke="#D42C67" stroke-width="2"/>
+</svg>
