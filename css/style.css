@@ -26,7 +26,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 88px;
+  scroll-padding-top: 100px;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -216,7 +216,7 @@ h2 {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  height: 78px;
+  height: 90px;
 }
 
 .marca {
@@ -227,8 +227,8 @@ h2 {
   color: var(--vinho);
 }
 .marca__icone {
-  width: 54px;
-  height: 54px;
+  width: 70px;
+  height: 70px;
   flex: none;
   object-fit: contain;
   transition: transform .4s cubic-bezier(.34, 1.56, .64, 1);
@@ -785,14 +785,14 @@ article.modo:last-of-type .modo__foto img { object-position: 50% 26%; }
 .marca__bolha {
   display: grid;
   place-items: center;
-  width: 64px;
-  height: 64px;
+  width: 84px;
+  height: 84px;
   flex: none;
   border-radius: 50%;
   background: var(--creme);
   box-shadow: 0 10px 22px -12px rgba(60, 0, 20, .8);
 }
-.marca__bolha .marca__icone { width: 48px; height: 48px; }
+.marca__bolha .marca__icone { width: 66px; height: 66px; }
 
 .rodape__redes { display: flex; gap: 10px; }
 .rodape__redes a {
@@ -939,8 +939,8 @@ article.modo:last-of-type .modo__foto img { object-position: 50% 26%; }
 
 @media (max-width: 640px) {
   body { font-size: 1rem; }
-  .topo__inner { height: 70px; }
-  .marca__icone { width: 48px; height: 48px; }
+  .topo__inner { height: 76px; }
+  .marca__icone { width: 58px; height: 58px; }
   .marca__nome { font-size: .95rem; letter-spacing: .07em; }
   .marca__sub { font-size: .55rem; letter-spacing: .24em; }
 
