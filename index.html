@@ -11,9 +11,11 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="Leticia Trevizan · Médica Veterinária">
   <meta property="og:description" content="Consultas, vacinas, exames, pet sitter, cannabis medicinal e ozonioterapia em Cerquilho/SP. Domicílio | Consultório.">
-  <meta property="og:image" content="assets/leticia.jpg">
+  <meta property="og:image" content="assets/leticia-gato.jpg">
 
-  <link rel="icon" type="image/svg+xml" href="assets/logo-icone.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito:wght@400;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
@@ -53,9 +55,6 @@
   <!-- ===================== Ícones (sprite SVG) ===================== -->
   <svg class="sprite" aria-hidden="true" focusable="false">
     <defs>
-      <clipPath id="clip-coracao">
-        <path d="M100 182C60 150 12 115 12 68C12 38 35 18 62 18C80 18 93 28 100 42C107 28 120 18 138 18C165 18 188 38 188 68C188 115 140 150 100 182Z"/>
-      </clipPath>
       <!-- Formas orgânicas para as fotos -->
       <clipPath id="forma-1" clipPathUnits="objectBoundingBox">
         <path d="M0.47,0.02C0.66,0,0.86,0.06,0.95,0.24C1,0.36,0.97,0.5,0.96,0.62C0.95,0.8,0.86,0.95,0.66,0.98C0.52,1,0.4,0.95,0.28,0.94C0.13,0.93,0.02,0.84,0.01,0.66C0,0.52,0.07,0.42,0.07,0.3C0.07,0.14,0.26,0.04,0.47,0.02Z"/>
@@ -67,21 +66,6 @@
         <path d="M0.42,0.05C0.56,0,0.74,0.02,0.84,0.14C0.96,0.28,0.94,0.44,0.97,0.58C1,0.76,0.93,0.94,0.72,0.98C0.52,1,0.3,0.99,0.14,0.92C0.02,0.86,0,0.7,0.04,0.56C0.08,0.42,0.18,0.36,0.22,0.24C0.26,0.12,0.32,0.08,0.42,0.05Z"/>
       </clipPath>
     </defs>
-
-    <!-- Logo: coração + patinha -->
-    <symbol id="logo-coracao" viewBox="0 0 200 200">
-      <g clip-path="url(#clip-coracao)" stroke="none">
-        <rect width="200" height="200" fill="#A81C4E"/>
-        <path fill="#D42C67" transform="translate(10 -4)" d="M100 182C60 150 12 115 12 68C12 38 35 18 62 18C80 18 93 28 100 42C107 28 120 18 138 18C165 18 188 38 188 68C188 115 140 150 100 182Z"/>
-      </g>
-      <g fill="#FBF1E8" stroke="none" transform="translate(46 41) scale(1.08)">
-        <path d="M50 48C62 48 70 58 76 68C82 78 80 90 69 90C61 90 57 85 50 85C43 85 39 90 31 90C20 90 18 78 24 68C30 58 38 48 50 48Z"/>
-        <ellipse cx="36" cy="28" rx="8.5" ry="11.5" transform="rotate(-12 36 28)"/>
-        <ellipse cx="64" cy="28" rx="8.5" ry="11.5" transform="rotate(12 64 28)"/>
-        <ellipse cx="17" cy="47" rx="7.5" ry="10" transform="rotate(-38 17 47)"/>
-        <ellipse cx="83" cy="47" rx="7.5" ry="10" transform="rotate(38 83 47)"/>
-      </g>
-    </symbol>
 
     <!-- Patinha (usa a cor do texto) -->
     <symbol id="pata" viewBox="0 0 100 100">
@@ -110,7 +94,7 @@
   <header class="topo" id="topo">
     <div class="container topo__inner">
       <a class="marca" href="#inicio" aria-label="Leticia Trevizan, Médica Veterinária — início">
-        <svg class="marca__icone" aria-hidden="true"><use href="#logo-coracao"/></svg>
+        <img class="marca__icone" src="assets/logo.png" alt="" width="343" height="360">
         <span class="marca__texto">
           <span class="marca__nome">Leticia Trevizan</span>
           <span class="marca__sub">Médica Veterinária</span>
@@ -173,7 +157,7 @@
           <svg class="patinha-solta ps1" aria-hidden="true"><use href="#pata"/></svg>
           <svg class="patinha-solta ps2" aria-hidden="true"><use href="#pata"/></svg>
           <div class="hero__selo">
-            <svg aria-hidden="true"><use href="#logo-coracao"/></svg>
+            <img src="assets/logo.png" alt="" width="343" height="360">
             <span><strong>Atendimento</strong>humanizado</span>
           </div>
           <span class="hero__pata" aria-hidden="true"><svg><use href="#pata"/></svg></span>
@@ -189,7 +173,7 @@
           <h2>Tudo o que seu pet precisa, <span class="script">com carinho</span></h2>
           <p>Da prevenção às terapias integrativas, cada atendimento é pensado para o bem-estar do seu companheiro.</p>
           <figure class="servicos__foto">
-            <img class="forma-1" src="assets/exame.jpg" alt="Cachorro sendo examinado com cuidado" width="900" height="1350" loading="lazy">
+            <img class="forma-1" src="assets/leticia-gato.jpg" alt="Leticia Trevizan com um gato no colo" width="656" height="871" loading="lazy">
           </figure>
         </div>
 
@@ -270,7 +254,7 @@
           </article>
 
           <div class="modos__divisor" aria-hidden="true">
-            <span><svg><use href="#logo-coracao"/></svg></span>
+            <span><img src="assets/logo.png" alt="" width="343" height="360"></span>
           </div>
 
           <article class="modo">
@@ -310,7 +294,7 @@
               <img class="forma-1" src="assets/vacina.jpg" alt="Cachorro recebendo vacina" width="900" height="1350" loading="lazy">
             </div>
           </figure>
-          <span class="sobre__coracao" aria-hidden="true"><svg><use href="#logo-coracao"/></svg></span>
+          <span class="sobre__coracao" aria-hidden="true"><img src="assets/logo.png" alt="" width="343" height="360"></span>
           <svg class="rastro r1" aria-hidden="true"><use href="#pata"/></svg>
           <svg class="rastro r2" aria-hidden="true"><use href="#pata"/></svg>
           <svg class="rastro r3" aria-hidden="true"><use href="#pata"/></svg>
@@ -424,7 +408,7 @@
     <div class="container rodape__grid">
       <div class="rodape__marca">
         <a class="marca marca--clara" href="#inicio" aria-label="Voltar ao início">
-          <span class="marca__bolha"><svg class="marca__icone" aria-hidden="true"><use href="#logo-coracao"/></svg></span>
+          <span class="marca__bolha"><img class="marca__icone" src="assets/logo.png" alt="" width="343" height="360"></span>
           <span class="marca__texto">
             <span class="marca__nome">Leticia Trevizan</span>
             <span class="marca__sub">Médica Veterinária</span>
@@ -471,7 +455,7 @@
 
     <div class="container rodape__base">
       <!-- ✏️ EDITAR: número do CRMV -->
-      <p>© <span data-ano>2026</span> Leticia Trevizan · Médica Veterinária · CRMV-SP 00000</p>
+      <p>© <span data-ano>2026</span> Leticia Trevizan · Médica Veterinária · <span class="sem-quebra">CRMV-SP 00000</span></p>
       <p>Feito com <svg aria-hidden="true"><use href="#i-coracao"/></svg> em Cerquilho/SP</p>
     </div>
   </footer>
