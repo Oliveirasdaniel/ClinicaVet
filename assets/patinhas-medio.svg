@@ -8,7 +8,7 @@
       <ellipse cx="83" cy="47" rx="7.5" ry="10" transform="rotate(38 83 47)"/>
     </g>
   </defs>
-  <g fill="#B0184F" fill-opacity=".05">
+  <g fill="#174A8B" fill-opacity=".05">
     <use href="#p" transform="translate(24 18) scale(.34) rotate(-28 50 55)"/>
     <use href="#p" transform="translate(196 44) scale(.29) rotate(22 50 55)"/>
     <use href="#p" transform="translate(108 128) scale(.36) rotate(-38 50 55)"/>

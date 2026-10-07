@@ -2,14 +2,14 @@
    ✏️ CONFIGURAÇÃO — edite só aqui
    ========================================================= */
 const CONFIG = {
-  // WhatsApp com 55 + DDD + número, só dígitos. Ex.: '5515998765432'
-  whatsapp: '5515997148412',
+  // WhatsApp com 55 + DDD + número, só dígitos. Ex.: '5521998765432'
+  whatsapp: '5521964770320',
   // Mensagem que já aparece escrita quando o cliente abre o WhatsApp
-  mensagem: 'Olá, Leticia! Vim pelo site e gostaria de agendar um atendimento para o meu pet 🐾',
-  // Instagram sem o @. Ex.: 'leticiatrevizan.vet'
-  instagram: 'vetleticiatrevizan',
-  // Endereço do consultório, usado no mapa. Ex.: 'Rua Tal, 123 - Centro, Cerquilho - SP'
-  endereco: 'Cerquilho - SP',
+  mensagem: 'Olá, Raphaella! Vim pelo site e gostaria de falar sobre uma endoscopia 🐾',
+  // Instagram sem o @. Ex.: 'raphaellamartins.vet'
+  instagram: 'raphaellamartins.vet',
+  // Local usado no mapa. Ex.: 'Rio de Janeiro - RJ'
+  endereco: 'Rio de Janeiro - RJ',
 };
 
 /* ========================================================= */
@@ -86,6 +86,35 @@ const CONFIG = {
   document.addEventListener('click', (e) => {
     if (menu.classList.contains('aberto') && !menu.contains(e.target) && !botao.contains(e.target)) fecharMenu();
   });
+
+  // --- Vídeo: toca quando aparece na tela (respeita "reduzir movimento") ---
+  const video = document.querySelector('[data-video-auto]');
+  const botaoVideo = document.querySelector('[data-video-botao]');
+  if (video && botaoVideo) {
+    const moldura = video.closest('figure');
+    const semMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let pausadoPeloUsuario = semMovimento;
+    const atualizar = () => {
+      const tocando = !video.paused;
+      moldura.classList.toggle('tocando', tocando);
+      botaoVideo.setAttribute('aria-label', tocando ? 'Pausar vídeo' : 'Reproduzir vídeo');
+    };
+    const tocar = () => { const p = video.play(); if (p) p.catch(() => {}); };
+    video.addEventListener('play', atualizar);
+    video.addEventListener('pause', atualizar);
+    botaoVideo.addEventListener('click', () => {
+      if (video.paused) { pausadoPeloUsuario = false; tocar(); }
+      else { pausadoPeloUsuario = true; video.pause(); }
+    });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(([entrada]) => {
+        if (entrada.isIntersecting && !pausadoPeloUsuario) tocar();
+        else if (!entrada.isIntersecting) video.pause();
+      }, { threshold: 0.35 }).observe(video);
+    } else if (!pausadoPeloUsuario) {
+      tocar();
+    }
+  }
 
   // --- Link ativo no menu ---
   const links = [...menu.querySelectorAll('ul a')];
