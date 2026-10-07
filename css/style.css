@@ -582,7 +582,7 @@ h2 {
   margin: 0 0 26px;
   height: 250px;
 }
-.modo__foto img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; }
+.modo__foto img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 32%; }
 article.modo:last-of-type .modo__foto img { object-position: 50% 26%; }
 .modo__topo { display: flex; align-items: center; gap: 18px; margin-bottom: 18px; }
 .modo__icone {
@@ -648,55 +648,135 @@ article.modo:last-of-type .modo__foto img { object-position: 50% 26%; }
 }
 .modos__divisor img { width: 42px; height: 42px; object-fit: contain; }
 
-/* ---------------------------------------------------------
-   Casos
-   --------------------------------------------------------- */
-.casos {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+/* Vídeo em destaque (reel do Instagram) */
+.video-destaque {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
+  grid-template-columns: 1fr minmax(300px, 400px);
+  align-items: center;
+  gap: clamp(36px, 6vw, 88px);
+  margin-top: clamp(64px, 9vw, 110px);
 }
-.caso {
+.video-destaque__texto h3 {
+  margin: 6px 0 18px;
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+  line-height: 1.15;
+}
+.video-destaque__citacao {
   position: relative;
-  overflow: hidden;
-  padding: 30px 28px 32px;
+  margin: 0 0 18px;
+  padding: 4px 0 4px 22px;
+  border-left: 3px solid var(--azul-escuro);
+}
+.video-destaque__citacao p {
+  margin: 0;
+  font-family: var(--fonte-titulo);
+  font-style: italic;
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  line-height: 1.45;
+  color: var(--azul-escuro-2);
+}
+.video-destaque__texto > p { margin: 0 0 26px; max-width: 52ch; color: var(--marinho-2); }
+
+.video-destaque__reel {
+  justify-self: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 8px;
   border-radius: 30px;
   background: var(--gelo);
   box-shadow: var(--sombra);
-  transition: transform .3s ease;
 }
-.caso:hover { transform: translateY(-4px); }
-.caso__pata {
-  position: absolute;
-  right: -14px;
-  bottom: -18px;
-  width: 96px;
-  height: 96px;
-  color: var(--azul-escuro);
-  opacity: .08;
-  transform: rotate(-18deg);
-}
-.caso__destaque {
+/* o Instagram troca o blockquote por um iframe com estilos inline */
+.video-destaque__reel .instagram-media {
   display: block;
-  font-family: var(--fonte-titulo);
-  font-style: italic;
-  font-weight: 600;
-  font-size: 2.5rem;
-  line-height: 1.1;
-  color: var(--azul-escuro);
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  border: 0 !important;
+  border-radius: 22px !important;
+  box-shadow: none !important;
+  overflow: hidden;
 }
-.caso h3 {
-  margin: 10px 0 8px;
-  font-family: var(--fonte-titulo);
-  font-weight: 600;
-  font-size: 1.35rem;
-  line-height: 1.25;
+/* antes de carregar: um cartão com link para o reel */
+.video-destaque__reel blockquote.instagram-media {
+  display: grid;
+  place-items: center;
+  min-height: 560px;
+  padding: 24px;
+  background: linear-gradient(160deg, var(--azul-escuro) 0%, #6FA6DE 100%);
 }
-.caso p { position: relative; z-index: 1; margin: 0; color: var(--marinho-2); }
-.casos__acoes { display: flex; justify-content: center; margin-top: 40px; }
+.video-destaque__reel blockquote.instagram-media a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: var(--gelo);
+  color: var(--azul-escuro-2);
+  font-weight: 800;
+  text-decoration: none;
+}
+.video-destaque__reel blockquote.instagram-media svg { width: 18px; height: 18px; }
+
+/* ---------------------------------------------------------
+   Galeria da endoscopia
+   --------------------------------------------------------- */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(18px, 2.4vw, 28px);
+  padding-bottom: 48px;
+}
+.galeria__item {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 30px;
+  border: 8px solid var(--gelo);
+  background: var(--marinho);
+  box-shadow: var(--sombra);
+}
+.galeria__item:nth-child(2) { transform: translateY(48px); }
+.galeria__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+.galeria__item:first-child img { object-position: 50% 55%; }
+.galeria__item:hover img { transform: scale(1.04); }
+.galeria__item figcaption {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: rgba(15, 39, 66, .72);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.galeria__item figcaption::before {
+  content: "";
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #7DBDF5;
+  box-shadow: 0 0 0 3px rgba(125, 189, 245, .35);
+}
+.galeria__acoes { display: flex; justify-content: center; margin-top: 40px; }
 
 /* ---------------------------------------------------------
    Sobre
@@ -722,7 +802,7 @@ article.modo:last-of-type .modo__foto img { object-position: 50% 26%; }
 .blob--sobre { top: 0; left: 3%; width: 74%; height: 82%; }
 .blob--sobre img { object-position: 50% 42%; }
 .blob--sobre-menor { right: 0; bottom: 0; width: 45%; aspect-ratio: 1; }
-.blob--sobre-menor img { object-position: 40% 55%; }
+.blob--sobre-menor img { object-position: 50% 35%; }
 .sobre__coracao {
   position: absolute;
   top: 6%;
@@ -1021,6 +1101,10 @@ article.modo:last-of-type .modo__foto img { object-position: 50% 26%; }
 
   .modos { grid-template-columns: 1fr; gap: 44px; }
   .modos__divisor { width: auto; height: 3px; margin-inline: 12%; }
+  .video-destaque { grid-template-columns: 1fr; }
+  .video-destaque__texto { text-align: center; }
+  .video-destaque__texto > p { margin-inline: auto; }
+  .video-destaque__citacao { border-left: 0; padding: 0; }
 
   .sobre__grid { grid-template-columns: 1fr; }
   .sobre__arte { width: min(100%, 420px); }
@@ -1044,6 +1128,24 @@ article.modo:last-of-type .modo__foto img { object-position: 50% 26%; }
   .cta__golden { left: 9%; height: 128%; }
   .cta__gato { right: 13%; height: 96%; }
   .cta__pata--1 { left: auto; right: -30px; top: auto; bottom: 30%; }
+
+  /* galeria vira carrossel com deslize lateral */
+  .galeria {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: min(78%, 300px);
+    gap: 16px;
+    margin-inline: -16px;
+    padding: 4px 16px 28px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 16px;
+    scrollbar-width: none;
+  }
+  .galeria::-webkit-scrollbar { display: none; }
+  .galeria__item { scroll-snap-align: start; }
+  .galeria__item:nth-child(2) { transform: none; }
+  .galeria__acoes { margin-top: 16px; }
 }
 
 @media (max-width: 640px) {
