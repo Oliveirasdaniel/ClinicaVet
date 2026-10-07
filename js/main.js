@@ -116,6 +116,28 @@ const CONFIG = {
     }
   }
 
+  // --- Reel do Instagram: carrega o script oficial só quando a seção se aproxima ---
+  const reel = document.querySelector('[data-reel]');
+  if (reel) {
+    const carregarReel = () => {
+      if (window.instgrm) { window.instgrm.Embeds.process(); return; }
+      const s = document.createElement('script');
+      s.src = 'https://www.instagram.com/embed.js';
+      s.async = true;
+      document.body.appendChild(s);
+    };
+    if ('IntersectionObserver' in window) {
+      const obsReel = new IntersectionObserver(([entrada]) => {
+        if (!entrada.isIntersecting) return;
+        obsReel.disconnect();
+        carregarReel();
+      }, { rootMargin: '600px 0px' });
+      obsReel.observe(reel);
+    } else {
+      carregarReel();
+    }
+  }
+
   // --- Link ativo no menu ---
   const links = [...menu.querySelectorAll('ul a')];
   const secoes = links
