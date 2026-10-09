@@ -526,14 +526,14 @@ h2 {
 .servicos__video.tocando .icone-play { display: none; }
 
 .servicos__lista { list-style: none; margin: 0; padding: 0; }
-.servicos__lista li {
+.servicos__lista > li {
   display: grid;
   grid-template-columns: 70px 1fr;
   gap: 16px;
   padding: 28px 0;
   border-top: 1.5px solid rgba(23, 74, 139, .35);
 }
-.servicos__lista li:last-child { border-bottom: 1.5px solid rgba(23, 74, 139, .35); }
+.servicos__lista > li:last-child { border-bottom: 1.5px solid rgba(23, 74, 139, .35); }
 .servicos__num {
   font-family: var(--fonte-titulo);
   font-style: italic;
@@ -554,7 +554,7 @@ h2 {
   line-height: 1.2;
   transition: color .25s ease;
 }
-.servicos__lista li:hover h3 { color: var(--azul-escuro-2); }
+.servicos__lista > li:hover h3 { color: var(--azul-escuro-2); }
 .servicos__nota {
   font-family: var(--fonte-script);
   font-weight: 400;
@@ -562,6 +562,30 @@ h2 {
   color: var(--azul-escuro-2);
 }
 .servicos__lista p { margin: 0; max-width: 48ch; color: var(--marinho-2); }
+.servicos__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.servicos__tags li {
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: rgba(246, 250, 255, .7);
+  border: 1px solid rgba(23, 74, 139, .22);
+  color: var(--azul-escuro-2);
+  font-size: .9rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.servicos__mais { margin: 22px 0 0; color: var(--marinho-2); }
+.servicos__mais a {
+  color: var(--azul-escuro-2);
+  font-weight: 800;
+  text-underline-offset: 3px;
+}
 
 /* ---------------------------------------------------------
    Domicílio | Consultório
@@ -1162,7 +1186,7 @@ article.modo:last-of-type .modo__foto img { object-position: 50% 26%; }
   .modo__foto { height: 200px; }
   .hero__selo img { width: 34px; height: 34px; }
 
-  .servicos__lista li { grid-template-columns: 46px 1fr; gap: 10px; padding: 22px 0; }
+  .servicos__lista > li { grid-template-columns: 46px 1fr; gap: 10px; padding: 22px 0; }
   .servicos__num { font-size: 1.25rem; }
 
   .modo__topo { gap: 14px; }
